@@ -21,18 +21,39 @@
             padding: 40px;
             box-shadow:0 8px 20px rgbaa(0,0,0,0.2);
         } 
+
+.title-container{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    gap:20px;
+}
+
+.logo{
+    width:60px;
+    height:auto;
+
+    background:white;
+    padding:8px;
+
+    border-radius:50%;
+
+    box-shadow:0 4px 12px rgba(0,0,0,0.3);
+}    
         
 .main-title{
     font-size: 3rem;
     font-weight: bold;
     text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
-    margin-bottom: 5px;
+    margin: 0px;
 }
         
 .subtitle{
     font-size: 1.2rem;
     color: white;
-    margin-top: 0;
+    margin-top: 10px;
+    text-align:center;
+    letter-spacing:1px;
 }
         
         nav {
@@ -72,12 +93,20 @@
 <body>
 
 <header>
-    <h1 class="main-title">
-        <img src="images/graduation-logo.png" width="100">
+
+     <div class="title-container">
+         
+        <img src="images/graduation-logo.png" class="logo">
+         
+    <h1 class="main-title"     
           Emmanuel's Academic Vault
     </h1>
+
+         </div>
     
-    <p Your Personal Study & Notes Portal </p>
+    <p class="subtitle">
+        Your Personal Study & Notes Portal
+    </p>
 
 </header>
     
