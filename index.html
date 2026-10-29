@@ -7,9 +7,9 @@
 
     <style>
         body {
-            font-family: Montserrat, sans-serif;
+            font-family:'Segoe UI', Arial sans-serif;
             margin: 0;
-            background: #f4f6f9;
+            background: #fdf6e3;
             color: #333;
         }
 
@@ -53,15 +53,54 @@
             padding: 10px;
         }
     </style>
+    .main-title{
+    font-size: 3rem;
+    font-weight: bold;
+    text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
+    letter-spacing: 2px;
+    margin: 0;
+}
 </head>
 <body>
 
-<header>
-    <h1>
+  header {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color: white;
+    text-align: center;
+    padding: 50px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+    <h1 class="main-title">
         <img src="images/graduation logo.png" width="100">
-        Emmanuel's Study Hub</h1>
-    <p>Notes, Resources, and Learning Materials</p>
-</header>
+        Emmanuel's Academic Vault
+    </h1>
+    <p class="subtitle">
+        Your Personal Study & Notes Portal
+    </p>
+    .subtitle{
+    font-size: 1.3rem;
+    color: #f8fafc;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+header {
+    background: linear-gradient(
+        135deg,
+        #2563eb,
+        #1e40af
+    );
+
+    color: white;
+    text-align: center;
+    padding: 50px;
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
 <nav>
     <a href="#about">About</a>
     <a href="#notes">Notes</a>
