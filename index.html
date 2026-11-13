@@ -19,7 +19,7 @@
             color: black;
             text-align: center;
             padding: 40px;
-            box-shadow:0 8px 20px rgbaa(0,0,0,0.2);
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
         } 
 
 .title-container{
@@ -76,19 +76,45 @@
         }
 
         .card {
-            background: cream;
+            background: #fffdd0;
             padding: 15px;
             border-radius: 10px;
             margin-bottom: 15px;
             box-shadow: 0 2px 5px rgba(0,0,0,.1);
         }
+.hidden {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 1s ease;
+}
 
+.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.main-title {
+    animation: slideDown 1s ease-out;
+}
+        
         footer {
             text-align: center;
             background: #0066cc;
             color: white;
             padding: 10px;
-        
+  }  
     </style>
 </head>
 <body>
@@ -118,7 +144,7 @@
 </nav>
 
 <section id="about">
-    <div class="card">
+    <div class="card hidden">
         <h2>About Me</h2>
         <p>
             Hi! I'm Emmanuel, a student at JKUAT.
@@ -129,7 +155,7 @@
 </section>
 
 <section id="notes">
-    <div class="card">
+    <div class="card hidden">
         
         <h2>📘Biology </h2>
         <p> View or download my Biology notes which may include various topics on 
@@ -139,13 +165,13 @@
         <a href="BACTERIA REPRODUCTION.pdf">  📄Open Biology Notes </a>
     </div>
 
-    <div class="card">
+    <div class="card hidden">
         <h2>🧪Chemistry </h2>
         <p>Atomic structure study notes.</p>
         <a href="chemistry.html">➕  Open Notes</a>
     </div>
 
-    <div class="card">
+    <div class="card hidden">
         <h2>📐Mathematics </h2>
         <p> Mathematics for science study notes.</p>
         <a href="Mathematics for science.pdf">📄 Open Notes</a>
@@ -153,7 +179,7 @@
 </section>
 
 <section id="resources">
-    <div class="card">
+    <div class="card hidden">
         <h2>Useful Resources</h2>
         <ul>
             <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
