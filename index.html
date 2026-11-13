@@ -141,6 +141,10 @@
     <a href="#about">About</a>
     <a href="#notes">Notes</a>
     <a href="#resources">Resources</a>
+
+    <button id="themeToggle"> 
+        ☀️ Light Mode
+    </button>
 </nav>
 
 <section id="about">
@@ -192,6 +196,25 @@
 <footer>
     <p>© 2026 Emmanuel's Study Hub</p>
 </footer>
+<script>
+const button = document.getElementById("themeToggle");
 
+if(localStorage.getItem("theme") === "light"){
+    document.body.classList.add("light-mode");
+}
+
+button.addEventListener("click", () => {
+
+    document.body.classList.toggle("light-mode");
+
+    if(document.body.classList.contains("light-mode")){
+        localStorage.setItem("theme","light");
+        button.textContent = "🌙 Dark Mode";
+    } else {
+        localStorage.setItem("theme","dark");
+        button.textContent = "☀️ Light Mode";
+    }
+});
+</script>
 </body>
 </html>
