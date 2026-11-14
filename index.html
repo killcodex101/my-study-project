@@ -1,255 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emmanuel's Study Hub</title>
-
-    <style>
-        
-        body {
-            font-family:'Segoe UI', Arial sans-serif;
-            margin: 0;
-            background: #121212;
-            color: white;
-        }
-
-        header {
-            background: #0066cc;
-            color: black;
-            text-align: center;
-            padding: 40px;
-            box-shadow:0 8px 20px rgba(0,0,0,0.2);
-        } 
-
-.title-container{
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    gap:20px;
-}
-
-.logo{
-    width:60px;
-    height:auto;
-
-    background:#1566C1;
-    
-    padding:8px;
-
-    border-radius:50%;
-
-    box-shadow:0 4px 12px rgba(0,0,0,0.3);
-}    
-        
-.main-title{
-    font-size: 3rem;
-    font-weight: bold;
-    text-shadow: 3px 3px 8px rgba(0,0,0,0.4);
-    margin: 0px;
-}
-        
-.subtitle{
-    font-size: 1.2rem;
-    color: white;
-    margin-top: 10px;
-    text-align:center;
-    letter-spacing:1px;
-}
-        
-        nav {
-            background: #004c99;
-            text-align: center;
-            padding: 10px;
-        }
-
-        nav a {
-            color: white;
-            text-decoration: none;
-            margin: 15px;
-        }
-
-        section {
-            max-width: 900px;
-            margin: auto;
-            padding: 20px;
-        }
-
-        .card {
-            background: #1e1e1e;
-            padding: 15px;
-            border-radius: 10px;
-            margin-bottom: 15px;
-            box-shadow: 0 2px 5px rgba(0,0,0,.1);
-        }
-.hidden {
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 1s ease;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.main-title {
-    animation: slideDown 1s ease-out;
-}
-        
-        footer {
-            text-align: center;
-            background: #0066cc;
-            color: white;
-            padding: 10px;
-  }  
-        
-
-/* LIGHT MODE */
-
-.light-mode {
-    background: #f5f5f5;
-    color: #222;
-}
-
-.light-mode .card {
-    background: white;
-    color: black;
-}
-
-.light-mode nav {
-    background: #0066cc;
-}
-
-.light-mode header {
-    background: #4d94ff;
-}
-
-.light-mode a {
-    color: #004c99;
-}
-
-#themeToggle {
-    padding: 8px 12px;
-    margin-left: 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: bold;
-}
-        
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Emmanuel's Academic Vault: study notes, assignments and learning resources.">
+  <title>Emmanuel's Study Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 <body>
 
-<header>
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#top" class="brand">
+        <img src="images/graduation-logo.png" alt="" class="brand-logo" width="36" height="36">
+        <span>Study Hub</span>
+      </a>
 
-     <div class="title-container">
-         
-        <img src="images/graduation-logo.png" class="logo">
-         
-    <h1 class="main-title">    
-          Emmanuel's Academic Vault
-    </h1>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#notes">Notes</a></li>
+        <li><a href="#resources">Resources</a></li>
+      </ul>
 
-         </div>
-    
-    <p class="subtitle">
-        Your Personal Study & Notes Portal
-    </p>
+      <div class="nav-actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Switch to dark mode" title="Toggle theme">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+        <button class="icon-btn menu-btn" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </nav>
+  </header>
 
-</header>
-    
-<nav>
-    <a href="#about">About</a>
-    <a href="#notes">Notes</a>
-    <a href="#resources">Resources</a>
+  <main>
 
-    <button id="themeToggle"> 
-        ☀️ Light Mode
-    </button>
-</nav>
-
-<section id="about">
-    <div class="card">
-        <h2>About Me</h2>
-        <p>
-            Hi! I'm Emmanuel, a student at JKUAT.
-            This website contains my study notes,
-            assignments, and educational resources.
-        </p>
-    </div>
-</section>
-
-<section id="notes">
-    <div class="card">
-        
-        <h2>📘Biology </h2>
-        <p> View or download my Biology notes which may include various topics on 
-            microbial diversity
-            invertebrate zoology
-            cell biology.</p>
-        <a href="BACTERIA REPRODUCTION.pdf">  📄Open Biology Notes </a>
-    </div>
-
-    <div class="card">
-        <h2>🧪Chemistry </h2>
-        <p>Atomic structure study notes.</p>
-        <a href="chemistry.html">➕  Open Notes</a>
-    </div>
-
-    <div class="card">
-        <h2>📐Mathematics </h2>
-        <p> Mathematics for science study notes.</p>
-        <a href="Mathematics for science.pdf">📄 Open Notes</a>
-    </div>
-</section>
-
-<section id="resources">
-    <div class="card">
-        <h2>Useful Resources</h2>
-        <ul>
-            <li><a href="https://www.khanacademy.org">Khan Academy</a></li>
-            <li><a href="https://www.w3schools.com">W3Schools</a></li>
-            <li><a href="https://www.geeksforgeeks.org">GeeksforGeeks</a></li>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+        <span class="pill">📚 Study &amp; Notes Portal</span>
+        <h1>Emmanuel's <span class="gradient-text">Academic Vault</span></h1>
+        <p class="lead">Everything I'm learning in one place: lecture notes, assignments and useful resources, ready to view or download.</p>
+        <div class="hero-buttons">
+          <a href="#notes" class="btn btn-primary">Browse Notes</a>
+          <a href="#about" class="btn btn-ghost">About Me</a>
+        </div>
+        <ul class="stats" aria-label="Site summary">
+          <li><strong>3</strong><span>Subjects</span></li>
+          <li><strong>PDF</strong><span>Downloads</span></li>
+          <li><strong>Free</strong><span>To access</span></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>About Me</h2>
+          <p>A little about who's behind the notes.</p>
+        </div>
+        <div class="about-card reveal">
+          <div class="avatar" aria-hidden="true">E</div>
+          <div>
+            <h3>Hi, I'm Emmanuel 👋</h3>
+            <p>I'm a BSc Microbiology student at JKUAT. This website holds my study notes, assignments and educational resources. I built it to keep my learning organised and to share it with anyone who finds it useful.</p>
+            <div class="tags">
+              <span class="tag">JKUAT</span>
+              <span class="tag">Microbiology</span>
+              <span class="tag">Web &amp; Science</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- NOTES -->
+    <section class="section alt" id="notes">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Study Notes</h2>
+          <p>Pick a subject to open its notes.</p>
+        </div>
+
+        <div class="search-wrap reveal">
+          <label for="search" class="sr-only">Search subjects and resources</label>
+          <input type="search" id="search" placeholder="Search subjects or topics (e.g. bacteria, atom, algebra)…" autocomplete="off">
+        </div>
+
+        <div class="grid" id="notes-grid">
+
+          <article class="card reveal" data-search="biology microbial diversity invertebrate zoology cell biology bacteria reproduction">
+            <div class="card-icon bio" aria-hidden="true">🧬</div>
+            <h3>Biology</h3>
+            <p>Microbial diversity, invertebrate zoology and cell biology.</p>
+            <ul class="topic-list">
+              <li>Bacteria reproduction</li>
+              <li>Microbial diversity</li>
+              <li>Cell biology</li>
+            </ul>
+            <a class="btn btn-card" href="BACTERIA%20REPRODUCTION.pdf" target="_blank" rel="noopener">📄 Open Biology Notes</a>
+          </article>
+
+          <article class="card reveal" data-search="chemistry atomic structure atom">
+            <div class="card-icon chem" aria-hidden="true">🧪</div>
+            <h3>Chemistry</h3>
+            <p>Atomic structure study notes.</p>
+            <ul class="topic-list">
+              <li>Atomic structure</li>
+            </ul>
+            <a class="btn btn-card" href="chemistry.html">📖 Open Chemistry Notes</a>
+          </article>
+
+          <article class="card reveal" data-search="mathematics maths math science algebra">
+            <div class="card-icon math" aria-hidden="true">📐</div>
+            <h3>Mathematics</h3>
+            <p>Mathematics for science study notes.</p>
+            <ul class="topic-list">
+              <li>Mathematics for science</li>
+            </ul>
+            <a class="btn btn-card" href="Mathematics%20for%20science.pdf" target="_blank" rel="noopener">📄 Open Maths Notes</a>
+          </article>
+
+        </div>
+
+        <p class="no-results" id="no-results" hidden>No matching subjects found. Try another word.</p>
+      </div>
+    </section>
+
+    <!-- RESOURCES -->
+    <section class="section" id="resources">
+      <div class="container">
+        <div class="section-head reveal">
+          <h2>Useful Resources</h2>
+          <p>Websites I recommend for learning more.</p>
+        </div>
+
+        <div class="grid resources-grid">
+          <a class="resource reveal" href="https://www.khanacademy.org" target="_blank" rel="noopener">
+            <span class="res-emoji" aria-hidden="true">🎓</span>
+            <div><h3>Khan Academy</h3><p>Free lessons in science, maths and more.</p></div>
+          </a>
+          <a class="resource reveal" href="https://www.ncbi.nlm.nih.gov/books/" target="_blank" rel="noopener">
+            <span class="res-emoji" aria-hidden="true">🔬</span>
+            <div><h3>NCBI Bookshelf</h3><p>Free biology and microbiology textbooks.</p></div>
+          </a>
+          <a class="resource reveal" href="https://www.w3schools.com" target="_blank" rel="noopener">
+            <span class="res-emoji" aria-hidden="true">💻</span>
+            <div><h3>W3Schools</h3><p>Web development tutorials and references.</p></div>
+          </a>
+          <a class="resource reveal" href="https://www.geeksforgeeks.org" target="_blank" rel="noopener">
+            <span class="res-emoji" aria-hidden="true">🧠</span>
+            <div><h3>GeeksforGeeks</h3><p>Programming and computer science guides.</p></div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Emmanuel's Study Hub. Made with 💚 at JKUAT.</p>
+      <a href="#top" class="to-top-link">Back to top ↑</a>
     </div>
-</section>
+  </footer>
 
-<footer>
-    <p>© 2026 Emmanuel's Study Hub</p>
-</footer>
-<script>
-const button = document.getElementById("themeToggle");
+  <button class="back-to-top" id="back-to-top" aria-label="Back to top" hidden>↑</button>
 
-if(localStorage.getItem("theme") === "light"){
-    document.body.classList.add("light-mode");
-}
-
-button.addEventListener("click", () => {
-
-    document.body.classList.toggle("light-mode");
-
-    if(document.body.classList.contains("light-mode")){
-        localStorage.setItem("theme","light");
-        button.textContent = "🌙 Dark Mode";
-    } else {
-        localStorage.setItem("theme","dark");
-        button.textContent = "☀️ Light Mode";
-    }
-});
-</script>
 </body>
 </html>
